@@ -3,7 +3,7 @@ nixPkgs = ["ffmpeg", "nodejs_20", "python3", "python3Packages.yt-dlp"]
 
 [phases.build]
 cmds = [
-    "npm ci"
+    "npm ci --legacy-peer-deps --prefer-offline --no-audit"
 ]
 
 [start]
