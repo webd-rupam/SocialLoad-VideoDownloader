@@ -8,8 +8,9 @@ RUN apk add --no-cache \
   py3-pip \
   curl
 
-# Install yt-dlp via pip
-RUN pip install --no-cache-dir yt-dlp
+# Install pipx and yt-dlp using pipx (or alternatively, use a virtual environment)
+RUN pip install --no-cache-dir pipx
+RUN pipx install yt-dlp
 
 # Create and set the working directory
 WORKDIR /app
