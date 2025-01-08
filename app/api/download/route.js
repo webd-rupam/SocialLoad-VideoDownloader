@@ -27,7 +27,8 @@ export async function POST(req) {
 
     return await new Promise((resolve, reject) => {
       // yt-dlp command with sanitized filename
-      const command = `/venv/bin/yt-dlp --cookies ../../cookies.txt -f best -o "${output}" "${videoUrl}"`;
+                      //  The path where yt-dlp is located
+      const command = `D:\\Downloads\\yt-dlp.exe -f best -o "${output}" "${videoUrl}"`;
 
       exec(command, (err, stdout, stderr) => {
         if (err) {
