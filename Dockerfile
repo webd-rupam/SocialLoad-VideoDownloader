@@ -24,6 +24,9 @@ RUN npm install
 # Copy the rest of the project files
 COPY . .
 
+# Copy cookies.txt into the container at the root directory (same level as the Dockerfile)
+COPY cookies.txt /cookies.txt
+
 # Build the Next.js app
 RUN npm run build
 
